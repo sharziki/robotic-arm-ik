@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="url(#grad)"/>
+  <!-- Base -->
+  <rect x="40" y="75" width="20" height="10" rx="2" fill="#374151"/>
+  <!-- Arm segments -->
+  <line x1="50" y1="75" x2="50" y2="50" stroke="#60a5fa" stroke-width="8" stroke-linecap="round"/>
+  <line x1="50" y1="50" x2="70" y2="35" stroke="#818cf8" stroke-width="6" stroke-linecap="round"/>
+  <line x1="70" y1="35" x2="75" y2="20" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+  <!-- Joints -->
+  <circle cx="50" cy="75" r="5" fill="#8b5cf6"/>
+  <circle cx="50" cy="50" r="4" fill="#8b5cf6"/>
+  <circle cx="70" cy="35" r="3" fill="#8b5cf6"/>
+  <!-- End effector -->
+  <circle cx="75" cy="20" r="4" fill="#22c55e"/>
+  <!-- Target -->
+  <circle cx="25" cy="25" r="6" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <line x1="18" y1="25" x2="32" y2="25" stroke="#ef4444" stroke-width="2"/>
+  <line x1="25" y1="18" x2="25" y2="32" stroke="#ef4444" stroke-width="2"/>
+</svg>
