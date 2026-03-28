@@ -89,9 +89,20 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] p-6">
-      <div className="max-w-[1100px] mx-auto">
-        <div className="flex gap-6">
+    <div className="min-h-screen bg-[hsl(var(--background))]">
+      <header className="border-b border-[hsl(var(--border))] bg-[hsl(var(--card))]">
+        <div className="max-w-[1100px] mx-auto px-6 py-6">
+          <h1 className="text-3xl font-bold text-[hsl(var(--foreground))] text-center">
+            Robotic Arm IK
+          </h1>
+          <p className="text-base text-[hsl(var(--muted-foreground))] mt-2 text-center">
+            Interactive inverse kinematics with FABRIK and CCD algorithms
+          </p>
+        </div>
+      </header>
+
+      <main className="max-w-[1100px] mx-auto px-6 py-8">
+        <div className="flex gap-8">
           {/* Controls */}
           <Controls
             joints={joints}
@@ -122,24 +133,18 @@ function App() {
               ikMethod={ikMethod}
             />
 
-            <p className="text-center text-xs text-[hsl(var(--muted-foreground))] mt-4">
+            <p className="text-center text-sm text-[hsl(var(--muted-foreground))] mt-6">
               Drag the red target to move the robotic arm using inverse kinematics
             </p>
           </div>
         </div>
-        <footer className="mt-8 py-4 text-center text-xs text-[hsl(var(--muted-foreground))] border-t border-[hsl(var(--border))]">
-          Made by{' '}
-          <a 
-            href="https://github.com/sharziki" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-[hsl(var(--primary))] hover:underline"
-          >
-            Sharvil Saxena
-          </a>
-        </footer>
+      </main>
 
-      </div>
+      <footer className="border-t border-[hsl(var(--border))] mt-12">
+        <div className="max-w-[1100px] mx-auto px-6 py-6 text-center text-sm text-[hsl(var(--muted-foreground))]">
+          Made by Sharvil Saxena
+        </div>
+      </footer>
     </div>
   );
 }
